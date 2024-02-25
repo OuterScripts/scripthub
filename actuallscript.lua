@@ -1,10 +1,11 @@
+local lplr = game.Players.LocalPlayer
 local isfile = isfile or function(file)
     local success, filecontents = pcall(function() return readfile(file) end)
     return success and type(filecontents) == 'string'
 end
 
 if not isfile("KeySystem1Whitelist.txt") then
-    game:GetService("Players").LocalPlayer:Kick("Key Detection\nKey not found!")
+    lplr:Kick("Key Detection\nKey not found!")
 end
 
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
@@ -27,7 +28,7 @@ Tabs.Main:AddButton({
     Title = "Arsenal",
     Description = ".",
     Callback = function()
-        ```loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubArsenal"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubArsenal"))()
     end
 })
 
@@ -43,6 +44,6 @@ Tabs.Main:AddButton({
     Title = "SlapBattles",
     Description = ".",
     Callback = function()
-        ```loadstring(game:HttpGet('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Farm'))()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Farm'))()
     end
 })
